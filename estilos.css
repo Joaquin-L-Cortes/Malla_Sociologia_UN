@@ -1,1 +1,17 @@
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
+.cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.obligatoria {
+  background-color: #A2F2A4;
+}
+.optativa {
+  background-color: #F2C2A2;
+}
