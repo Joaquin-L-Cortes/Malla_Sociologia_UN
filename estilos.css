@@ -1,17 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 5px;
+  gap: 8px;
+  max-width: 1400px;
+  margin: auto;
 }
+
 .cell {
+  background-color: white;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 8px;
+  font-size: 0.9rem;
   text-align: center;
+  border-radius: 6px;
   cursor: pointer;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.2s;
 }
+
+.cell:hover {
+  transform: scale(1.03);
+  background-color: #f0f0f0;
+}
+
+/* Colores por tipo */
 .obligatoria {
-  background-color: #A2F2A4;
+  background-color: #a2f2a4;
 }
+
 .optativa {
-  background-color: #F2C2A2;
+  background-color: #f2c2a2;
+}
+
+.libre {
+  background-color: #d4d4f0;
+}
+
+.bloqueada {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  z-index: 1000;
+  display: none;
+}
+
+.popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup li {
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.popup li:hover {
+  background-color: #eee;
 }
